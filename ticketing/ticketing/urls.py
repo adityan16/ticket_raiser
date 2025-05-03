@@ -22,4 +22,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     #   path("login/", login_view, name="login"),
     path('', include('tickets.urls')),
+    
 ]
