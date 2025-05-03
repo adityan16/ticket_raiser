@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Your Tickets</h2>
+  <ul>
+    {% for ticket in tickets %}
+      <li><strong>{{ ticket.project_name }}</strong>: {{ ticket.title }} - {{ ticket.status }}</li>
+    {% empty %}
+      <li>No tickets yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
